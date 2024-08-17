@@ -9,13 +9,11 @@ splash Screen             | Home Screen     | Home Screen
 
 Specialties Screen               | turn Screen
 :-------------------------:|:-------------------------:|
-<img src="https://github.com/MehdiSekoba/drdr/blob/main/art/expertise_up.jpg"/>|<img src="https://github.com/MehdiSekoba/drdr/blob/main/art/expertise_down.jpg"/>  |
- |
+<img src="https://github.com/MehdiSekoba/drdr/blob/main/art/expertise_up.jpg"/>|<img src="https://github.com/MehdiSekoba/drdr/blob/main/art/expertise_down.jpg"/> 
 
  Profile Screen                     
-:-------------------------:|:-------------------------:|
-<<img src="https://github.com/MehdiSekoba/drdr/blob/main/art/profile.jpg"/>  |
- |
+:-------------------------:
+<<img src="https://github.com/MehdiSekoba/drdr/blob/main/art/profile.jpg"/> 
 
 ## The rest of the features are at the bottom of the video viewing page
 ## Features
