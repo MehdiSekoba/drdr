@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--color me-->
+    <color name="Brandeis_Blue">#0165FC</color>
+    <color name="Raisin_Black">#242424</color>
+    <color name="Outer_Space">#484848</color>
+    <color name="Bright_Gray">#EAECF0</color>
+    <color name="North_Texas_Green">#148539</color>
+    <color name="Malachite_Green">#6BF097</color>
+    <color name="Cultured">#F5F5F5</color>
+    <color name="gold">#FFD700</color>
+    <color name="light_gray">#E0E0E0</color>
+    <color name="light_blue">#CCFFFF</color>
+    <color name="light_orange">#FFE5CC</color>
+    <color name="shimmer_color">#D3D3D3</color>
+</resources>

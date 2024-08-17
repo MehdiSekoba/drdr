@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--back-->
+    <View
+        android:id="@+id/view_back"
+        android:layout_width="@dimen/_30mdp"
+        android:layout_height="@dimen/_10mdp"
+        android:layout_margin="@dimen/_6mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Raisin_Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--title-->
+    <View
+        android:id="@+id/view_title"
+        android:layout_width="@dimen/_100mdp"
+        android:layout_height="@dimen/_10mdp"
+        android:layout_margin="@dimen/_6mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Raisin_Black"
+        app:layout_constraintStart_toEndOf="@id/view_back"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--box-->
+    <View
+        android:id="@+id/box_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80mdp"
+        android:layout_marginHorizontal="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:background="@drawable/bg_rounded"
+        android:backgroundTint="@color/Raisin_Black"
+        app:layout_constraintTop_toBottomOf="@id/view_title" />
+    <!--title-->
+    <View
+        android:id="@+id/title"
+        android:layout_width="@dimen/_100mdp"
+        android:layout_height="@dimen/_10mdp"
+        android:layout_margin="@dimen/_6mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space"
+        app:layout_constraintEnd_toEndOf="@id/box_view"
+        app:layout_constraintStart_toStartOf="@id/box_view"
+        app:layout_constraintTop_toTopOf="@id/box_view" />
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space" />
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space" />
+
+    <View
+        android:id="@+id/view_3"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space" />
+
+    <View
+        android:id="@+id/view_4"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space" />
+    <!--add -->
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/top_views"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="view_1,view_2,view_3,view_4"
+        app:layout_constraintBottom_toBottomOf="@id/box_view"
+        app:layout_constraintEnd_toEndOf="@id/box_view"
+        app:layout_constraintStart_toStartOf="@id/box_view"
+        app:layout_constraintTop_toTopOf="@id/box_view" />
+    <!--view parent-->
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:layout_marginBottom="@dimen/_8mdp"
+        android:background="@drawable/bg_ticket"
+        android:backgroundTint="@color/Raisin_Black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/top_views"
+        app:layout_constraintStart_toStartOf="@id/top_views"
+        app:layout_constraintTop_toBottomOf="@id/top_views" />
+    <!--avatar-->
+    <View
+        android:id="@+id/view_avatar"
+        android:layout_width="@dimen/_60mdp"
+        android:layout_height="@dimen/_60mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space"
+        app:layout_constraintStart_toStartOf="@id/view_bottom"
+        app:layout_constraintTop_toTopOf="@id/view_bottom" />
+    <!--doctor-->
+    <View
+        android:id="@+id/doctor"
+        android:layout_width="@dimen/_100mdp"
+        android:layout_height="@dimen/_10mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space"
+        app:layout_constraintStart_toEndOf="@id/view_avatar"
+        app:layout_constraintTop_toTopOf="@id/view_bottom" />
+    <!--expertise-->
+    <View
+        android:id="@+id/expertise"
+        android:layout_width="@dimen/_140mdp"
+        android:layout_height="@dimen/_10mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space"
+        app:layout_constraintStart_toEndOf="@id/view_avatar"
+        app:layout_constraintTop_toBottomOf="@id/doctor" />
+<androidx.constraintlayout.widget.Guideline
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintGuide_percent="0.50"
+    android:orientation="vertical"
+    android:id="@+id/guid_center"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_34mdp"
+        android:orientation="vertical"
+        android:id="@+id/linear_lay"
+        app:layout_constraintEnd_toStartOf="@id/guid_center"
+        app:layout_constraintStart_toStartOf="@id/view_bottom"
+        app:layout_constraintTop_toBottomOf="@id/expertise"
+        app:layout_constraintEnd_toEndOf="@id/view_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom">
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_124mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="@id/linear_lay"
+        app:layout_constraintStart_toEndOf="@id/guid_center"
+        app:layout_constraintEnd_toEndOf="@id/view_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        >
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_134mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+        <View
+            android:layout_width="@dimen/_124mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/Outer_Space" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

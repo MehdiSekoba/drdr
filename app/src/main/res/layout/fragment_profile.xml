@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment"
+    >
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:shimmer_auto_start="true"
+        android:layout_marginTop="@dimen/_36mdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shimmer_direction="right_to_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/profile_placeholder_layout" />
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginHorizontal="@dimen/_14mdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/constraint">
+
+    <!--user name-->
+    <TextView
+        android:id="@+id/txt_user_name"
+        android:layout_width="@dimen/_80mdp"
+        android:layout_height="@dimen/_80mdp"
+        android:layout_marginTop="@dimen/_36mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Brandeis_Blue"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/tools_doctor_name" />
+    <!--edit profile-->
+    <TextView
+        android:id="@+id/txt_edit"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_22mdp"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:drawablePadding="@dimen/_6mdp"
+        android:gravity="center_horizontal|center_vertical|start"
+        android:text="@string/edit_profile"
+        app:drawableStartCompat="@drawable/ic_edit_profile"
+        app:drawableTint="@color/Raisin_Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_user_name" />
+    <!--my turns-->
+    <TextView
+        android:id="@+id/txt_turns"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_22mdp"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:drawablePadding="@dimen/_6mdp"
+        android:gravity="center_horizontal|center_vertical|start"
+        android:text="@string/my_turns"
+        app:drawableStartCompat="@drawable/calendar_out"
+        app:drawableTint="@color/Raisin_Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_edit" />
+    <!--comment me-->
+    <TextView
+        android:id="@+id/txt_comment"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_22mdp"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:drawablePadding="@dimen/_6mdp"
+        android:gravity="center_horizontal|center_vertical|start"
+        android:text="@string/comment_me"
+        app:drawableStartCompat="@drawable/messages"
+        app:drawableTint="@color/Raisin_Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_turns" />
+    <!--bookmark-->
+    <TextView
+        android:id="@+id/txt_bookmark"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_22mdp"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:drawablePadding="@dimen/_6mdp"
+        android:gravity="center_horizontal|center_vertical|start"
+        android:text="@string/doctor_book"
+        app:drawableStartCompat="@drawable/ic_bookmark"
+        app:drawableTint="@color/Raisin_Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_comment" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

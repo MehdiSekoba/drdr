@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_220mdp"
+    android:layout_height="@dimen/_200mdp"
+    android:layout_margin="@dimen/_6mdp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="@dimen/_16mdp"
+    app:strokeWidth="0dp"
+    app:cardElevation="0dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--card visit-->
+        <com.vipulasri.ticketview.TicketView
+            android:id="@+id/visit_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:ticketBackgroundColor="@color/light_blue"
+            app:ticketDividerColor="@color/Outer_Space"
+            app:ticketDividerDashGap="@dimen/_12mdp"
+            app:ticketDividerPadding="0dp"
+            app:ticketDividerType="dash"
+            app:ticketElevation="@dimen/_6mdp"
+            app:ticketOrientation="horizontal"
+            app:ticketScallopPositionPercent="50"
+            app:ticketScallopRadius="@dimen/_10mdp"
+            app:ticketShowBorder="false"
+            app:ticketShowDivider="true" />
+        <!--avatar-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatar_doctor"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_60mdp"
+            android:layout_margin="@dimen/_8mdp"
+            android:scaleType="fitXY"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ProfileRound"
+            tools:src="@tools:sample/avatars"
+            app:strokeWidth="@dimen/_2mdp"
+            android:padding="@dimen/_2mdp"
+            app:strokeColor="@color/Malachite_Green"/>
+        <!--status-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatarStatusImg"
+            android:layout_width="@dimen/_8mdp"
+            android:layout_height="@dimen/_8mdp"
+            android:layout_margin="@dimen/_2mdp"
+            android:background="@color/North_Texas_Green"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@id/avatar_doctor"
+            app:layout_constraintTop_toTopOf="@id/avatar_doctor"
+            app:shapeAppearance="@style/ProfileRound" />
+        <!--rate-->
+        <TextView
+            android:id="@+id/txt_rate"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_26mdp"
+            android:layout_margin="@dimen/_6mdp"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:padding="@dimen/_6mdp"
+            android:textAppearance="@style/TextAppearance_Farsi_Digits"
+            android:textColor="@color/Raisin_Black"
+            app:drawableEndCompat="@drawable/star"
+            app:drawableTint="@color/gold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="4.8"
+           />
+        <!--doctor name-->
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4mdp"
+            android:layout_marginStart="@dimen/_6mdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance_light"
+            android:textColor="@color/Raisin_Black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/avatar_doctor"
+            app:layout_constraintTop_toBottomOf="@id/txt_rate"
+            tools:text="@string/tools_txt" />
+        <!--Expertise-->
+
+        <TextView
+            android:id="@+id/txt_expertise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12mdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            android:textColor="@color/Raisin_Black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/avatar_doctor"
+            app:layout_constraintTop_toBottomOf="@id/txt_name"
+            tools:text="@string/tools_txt" />
+
+        <!--center-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+        <!--consultation-->
+        <TextView
+            android:id="@+id/txt_consultation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14mdp"
+            android:text="@string/consultation"
+            android:textAppearance="@style/TextAppearance_light"
+            android:textColor="@color/Outer_Space"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guid_center" />
+        <!--duration-->
+        <TextView
+            android:id="@+id/txt_consultation_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14mdp"
+            android:text="@string/consultation"
+            android:textAppearance="@style/TextAppearance_light"
+            android:textColor="@color/Raisin_Black"
+            app:layout_constraintStart_toEndOf="@id/guid_center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/guid_center" />
+        <!--response-->
+        <TextView
+            android:id="@+id/txt_response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14mdp"
+            android:layout_marginTop="@dimen/_4mdp"
+            android:text="@string/responsiveness"
+            android:textAppearance="@style/TextAppearance_light"
+            android:textColor="@color/Outer_Space"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_consultation" />
+        <!--duration response-->
+        <TextView
+            android:id="@+id/response_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14mdp"
+            android:layout_marginTop="@dimen/_4mdp"
+            android:text="@string/responsiveness"
+            android:textAppearance="@style/TextAppearance_light"
+            android:textColor="@color/Raisin_Black"
+            app:layout_constraintStart_toEndOf="@id/guid_center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_consultation_duration" />
+        <!--Counseling response-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_status"
+            style="@style/GreenMaterialButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14mdp"
+            android:layout_marginTop="@dimen/_2mdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/response_duration" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

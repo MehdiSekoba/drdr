@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_192mdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shimmer_auto_start="true"
+        app:shimmer_direction="right_to_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/comment_placeholder_layout" />
+            <include layout="@layout/comment_placeholder_layout" />
+
+
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <!--Title-->
+    <TextView
+        android:id="@+id/comment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15mdp"
+        android:gravity="center_vertical"
+        android:text="@string/txt_comment"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Brandeis_Blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/comment_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15mdp"
+        android:gravity="center_vertical"
+        android:text="@string/comment_de"
+        android:textAppearance="@style/TextAppearance_mobile_bold"
+        android:textColor="@color/Outer_Space"
+        app:drawableStartCompat="@drawable/user"
+        app:drawableTint="@color/Outer_Space"
+        android:drawablePadding="@dimen/_4mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/comment_title" />
+    <!--comment list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/comment_desc" />
+</androidx.constraintlayout.widget.ConstraintLayout>

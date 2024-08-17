@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+    <!--NestedScrollView-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/_40mdp">
+        <!--content-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--shimmer-->
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_head"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180mdp"
+                android:orientation="vertical"
+                app:shimmer_auto_start="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shimmer_direction="right_to_left">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/toolbar_placeholder_layout" />
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <!--head-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/head_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180mdp"
+                android:background="@drawable/home_head"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--avatar-->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/logoImg"
+                    android:layout_width="@dimen/_60mdp"
+                    android:layout_height="@dimen/_60mdp"
+                    android:layout_marginStart="@dimen/_10mdp"
+                    android:layout_marginTop="@dimen/_26mdp"
+                    android:background="@color/white"
+                    android:src="@drawable/logo"
+                    app:contentPadding="@dimen/_2mdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/ProfileRound"
+
+                    />
+                <!--location-->
+                <TextView
+                    android:id="@+id/txt_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8mdp"
+                    android:drawablePadding="@dimen/_6mdp"
+                    android:text="@string/tehran"
+                    android:textAppearance="@style/TextAppearance_Bold"
+                    android:textColor="@color/white"
+                    app:drawableTint="@color/Bright_Gray"
+                    app:layout_constraintBottom_toBottomOf="@id/logoImg"
+                    app:layout_constraintStart_toEndOf="@id/logoImg" />
+                <!--notification-->
+                <ImageView
+                    android:id="@+id/notification_img"
+                    android:layout_width="@dimen/_28mdp"
+                    android:layout_height="@dimen/_28mdp"
+                    android:layout_marginEnd="@dimen/_12mdp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/notification"
+                    app:layout_constraintBottom_toBottomOf="@id/logoImg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/logoImg"
+                    app:tint="@color/white" />
+                <!--search-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38mdp"
+                    android:layout_marginHorizontal="@dimen/_44mdp"
+                    android:layout_marginTop="@dimen/_12mdp"
+                    android:background="@drawable/search_bar_background"
+                    app:layout_constraintTop_toBottomOf="@id/txt_location">
+
+                    <TextView
+                        android:id="@+id/txt_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_10mdp"
+                        android:drawablePadding="@dimen/_6mdp"
+                        android:gravity="center_horizontal|center_vertical|start"
+                        android:text="@string/search"
+                        android:textAppearance="@style/TextAppearance_mobile_bold"
+                        app:drawableStartCompat="@drawable/search"
+                        app:drawableTint="@color/Outer_Space"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <!--sort-->
+                    <ImageView
+                        android:layout_width="@dimen/_24mdp"
+                        android:layout_height="@dimen/_24mdp"
+                        android:background="@drawable/bg_sort"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_6mdp"
+                        android:src="@drawable/sort"
+                        app:layout_constraintBottom_toBottomOf="@id/txt_search"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txt_search"
+                        app:tint="@color/white" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/head_lay">
+                <!--search-->
+                <ViewStub
+                    android:id="@+id/searchLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout="@layout/frequent_searches" />
+                <!--urgent-->
+                <ViewStub
+                    android:id="@+id/urgentLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout="@layout/urgent_doctor" />
+                <!--introduction-->
+                <ViewStub
+                    android:id="@+id/introductionLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout="@layout/item_introduction_doctor" />
+                <!--clinic-->
+                <ViewStub
+                    android:id="@+id/clinicLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout="@layout/item_clinic_visit" />
+                <!--comment-->
+                <ViewStub
+                    android:id="@+id/commentLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout="@layout/item_comment_home" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

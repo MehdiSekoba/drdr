@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.doctor.DoctorFragment">
+    <!--toolbar-->
+    <com.skydoves.androidveil.VeilLayout
+        android:id="@+id/veilLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="@dimen/_22mdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/_4mdp">
+            <!--back-->
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/_28mdp"
+                android:layout_height="@dimen/_28mdp"
+                android:layout_marginHorizontal="@dimen/_8mdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_4mdp"
+                android:rotation="180"
+                android:src="@drawable/arrow_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--title-->
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Raisin_Black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/img_back"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/doctor_enable"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.skydoves.androidveil.VeilLayout>
+    <!--shimmer-->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/veilLayout"
+        app:shimmer_auto_start="true"
+        app:shimmer_direction="right_to_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/specialty_placeholder_layout" /><include layout="@layout/specialty_placeholder_layout" />
+
+            <include layout="@layout/specialty_placeholder_layout" />
+
+
+
+            <include layout="@layout/clinic_placeholder_layout" />
+
+            <include layout="@layout/clinic_placeholder_layout" />
+
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <!--list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/expertise_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/veilLayout"
+        android:paddingBottom="@dimen/_90mdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

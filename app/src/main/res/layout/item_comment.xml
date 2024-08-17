@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_240mdp"
+    android:layout_height="@dimen/_152mdp"
+    android:layout_margin="@dimen/_6mdp"
+    app:cardBackgroundColor="@color/Cultured"
+    app:cardCornerRadius="@dimen/_10mdp"
+    app:strokeColor="@color/Brandeis_Blue"
+    app:strokeWidth="@dimen/_1mdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--avatar-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"
+            android:layout_margin="@dimen/_6mdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/avtar_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--user name-->
+        <TextView
+            android:id="@+id/txt_user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4mdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance_Bold"
+            android:textColor="@color/Raisin_Black"
+            app:layout_constraintEnd_toStartOf="@id/txt_date"
+            app:layout_constraintStart_toEndOf="@id/user_avatar"
+            app:layout_constraintTop_toTopOf="@id/user_avatar"
+            android:text="@string/user_doctor"/>
+        <!--date-->
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4mdp"
+            android:layout_marginEnd="@dimen/_4mdp"
+            android:textAppearance="@style/TextAppearance_Farsi_Digits"
+            android:textColor="@color/Raisin_Black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txt_user_name"
+            tools:text="@string/tools_doctor_name" />
+        <!--rate-->
+        <TextView
+            android:id="@+id/txt_rate"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_26mdp"
+            android:layout_marginTop="@dimen/_4mdp"
+            android:drawablePadding="@dimen/mines3mdp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance_Farsi_Digits"
+            android:textColor="@color/Raisin_Black"
+            app:drawableEndCompat="@drawable/star"
+            app:drawableTint="@color/gold"
+            app:layout_constraintStart_toStartOf="@id/txt_user_name"
+            app:layout_constraintTop_toBottomOf="@id/txt_user_name"
+            tools:text="4.8" />
+        <!--comment-->
+        <TextView
+            android:id="@+id/comment_visit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4mdp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textAppearance="@style/TextAppearance_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_rate"
+            tools:text="@string/txt_comment_default" />
+
+        <TextView
+            android:id="@+id/txt_reference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4mdp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/comment_visit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

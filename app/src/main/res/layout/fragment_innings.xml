@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.innings.InningsFragment">
+    <!--toolbar-->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:shimmer_auto_start="true"
+        android:layout_marginTop="@dimen/_36mdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shimmer_direction="right_to_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/turns_placeholder_layout" />
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.skydoves.androidveil.VeilLayout
+        android:id="@+id/veilLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="@dimen/_22mdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:veilLayout_shimmerEnable="true"
+        app:veilLayout_veiled="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_10mdp">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/_26mdp"
+                android:layout_height="@dimen/_26mdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_2mdp"
+                android:rotation="180"
+                android:src="@drawable/arrow_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/Outer_Space" />
+            <!--title-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:text="@string/innings"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Raisin_Black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/img_back"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.skydoves.androidveil.VeilLayout>
+
+    <!--Innings-->
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/veilLayout"
+       android:id="@+id/tab_lay"
+        android:layout_marginHorizontal="@dimen/_12mdp"
+        android:layout_marginTop="@dimen/_4mdp"
+        app:cardBackgroundColor="@color/Cultured"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="@dimen/_14mdp"
+        app:cardElevation="0dp"
+        android:elevation="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <!--title-->
+        <TextView
+            android:id="@+id/title_turn_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/turn_type"
+            android:layout_marginTop="@dimen/_4mdp"
+            android:textColor="@color/Raisin_Black"
+            android:textAppearance="@style/TextAppearance_Bold"/>
+        <!--Tab layout-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/inningsTabLayout"
+            style="@style/Widget.App.TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="scrollable"
+            app:tabSelectedTextAppearance="@style/TabLayoutFontBold"
+            app:tabTextAppearance="@style/TabLayoutFontNormal"
+            app:layout_constraintTop_toBottomOf="@id/title_turn_type"
+            android:layout_marginTop="@dimen/_4mdp"
+            android:paddingBottom="@dimen/_6mdp"
+            android:paddingStart="@dimen/_6mdp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <!--View pager-->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/inningsViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_lay" />
+</androidx.constraintlayout.widget.ConstraintLayout>

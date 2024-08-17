@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_180mdp"
+    android:layout_marginTop="@dimen/_10mdp">
+    <!--head-->
+    <View
+        android:id="@+id/view_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_head"
+        android:backgroundTint="@color/shimmer_color" />
+    <!--logo-->
+    <View
+        android:id="@+id/view_logo"
+        android:layout_width="@dimen/_80mdp"
+        android:layout_height="@dimen/_80mdp"
+        android:layout_margin="@dimen/_10mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--notification-->
+    <View
+        android:id="@+id/view_notification"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:layout_margin="@dimen/_10mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--location-->
+    <View
+        android:id="@+id/view_location"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/Outer_Space"
+        app:layout_constraintBottom_toBottomOf="@id/view_logo"
+        app:layout_constraintStart_toEndOf="@id/view_logo" />
+    <!--txt location-->
+    <View
+        android:id="@+id/view_txt_location"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_10mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:background="@drawable/bg_rounded"
+        android:backgroundTint="@color/Outer_Space"
+        app:layout_constraintBottom_toBottomOf="@id/view_location"
+        app:layout_constraintStart_toEndOf="@id/view_location"
+        app:layout_constraintTop_toTopOf="@id/view_location" />
+    <!--search-->
+    <View
+        android:layout_width="@dimen/_200mdp"
+        android:layout_height="@dimen/_40mdp"
+        app:layout_constraintTop_toBottomOf="@id/view_location"
+        app:layout_constraintStart_toStartOf="@id/view_parent"
+        app:layout_constraintEnd_toEndOf="@id/view_parent"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:background="@drawable/bg_rounded"
+        android:backgroundTint="@color/Outer_Space"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

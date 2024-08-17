@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4mdp">
+    <!--guid line-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guid_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.14" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_140mdp"
+        android:background="@drawable/bg_rounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_6mdp"
+        app:layout_constraintStart_toEndOf="@id/guid_line"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_line_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.19" />
+
+        <!--name clinic-->
+        <TextView
+            android:id="@+id/txt_name_clinic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14mdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance_Bold"
+            android:textColor="@color/Outer_Space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guid_line_2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="مرکز تخصصی مشاوره پرند
+ " />
+        <!--location-->
+        <TextView
+            android:id="@+id/txt_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6mdp"
+            android:drawablePadding="@dimen/_4mdp"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            android:textColor="@color/Outer_Space"
+            app:drawableTint="@color/Outer_Space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guid_line_2"
+            app:layout_constraintTop_toBottomOf="@id/txt_name_clinic"
+            tools:text="یزد-یزد-صفائیه، خیابان وزیری، وزیری 10، کلینیک پرند"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginEnd="@dimen/_4mdp"
+            android:lineSpacingExtra="@dimen/_2mdp"/>
+        <!--turn-->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/GreenMaterialButton"
+            app:layout_constraintTop_toBottomOf="@id/txt_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guid_line_2"
+            app:backgroundTint="@color/Brandeis_Blue"
+            android:id="@+id/btn_turn"
+            android:text="@string/txt_get_turn"
+            android:layout_marginTop="@dimen/_6mdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--image view-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatar_clinic"
+        android:layout_width="@dimen/_80mdp"
+        android:layout_height="@dimen/_80mdp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/constraint"
+        app:layout_constraintEnd_toStartOf="@id/constraint"
+        app:layout_constraintStart_toStartOf="@id/constraint"
+        app:layout_constraintTop_toTopOf="@id/constraint"
+        app:shapeAppearance="@style/RoundImage"
+        tools:src="@tools:sample/avatars"
+        app:strokeColor="@color/gold"
+        app:strokeWidth="2dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

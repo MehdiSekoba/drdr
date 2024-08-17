@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10mdp"
+   android:background="@drawable/bg_ticket"
+    android:backgroundTint="@color/Cultured"
+    android:id="@+id/ticketView"
+    android:paddingBottom="@dimen/_30mdp">
+    <!--avatar-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatar_doctor"
+        android:layout_width="@dimen/_60mdp"
+        android:layout_height="@dimen/_60mdp"
+        android:layout_margin="@dimen/_6mdp"
+        android:padding="@dimen/_2mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ProfileRound"
+        app:strokeColor="@color/Brandeis_Blue"
+        app:strokeWidth="@dimen/_1mdp"
+        tools:src="@tools:sample/avatars" />
+    <!--name-->
+    <TextView
+        android:id="@+id/doctor_name_family"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4mdp"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Raisin_Black"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_doctor"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toEndOf="@id/avatar_doctor"
+        app:layout_constraintTop_toTopOf="@id/avatar_doctor"
+        tools:text="@string/tools_doctor_name" />
+    <!--Expertise-->
+    <TextView
+        android:id="@+id/txt_expertise"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:textAppearance="@style/TextAppearance_light"
+        android:textColor="@color/Outer_Space"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toEndOf="@id/avatar_doctor"
+        app:layout_constraintTop_toBottomOf="@id/doctor_name_family"
+        tools:text="فوق تخصص بیماری‌های غدد درون‌ریز و متابولیسم (اندوکرینولوژی)
+" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guid_center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+    <!--code-->
+    <TextView
+        android:id="@+id/txt_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:text="@string/tracking_code"
+        android:layout_marginStart="@dimen/_6mdp"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintEnd_toStartOf="@id/guid_center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+        app:layout_constraintTop_toBottomOf="@id/txt_expertise" />
+    <!--tracking code-->
+    <TextView
+        android:id="@+id/tracking_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="@style/TextAppearance_Farsi_Digits"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toEndOf="@id/guid_center_horizontal"
+        app:layout_constraintTop_toTopOf="@id/txt_code"
+        tools:text="123" />
+    <!--line-->
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_6mdp"
+        android:layout_marginHorizontal="@dimen/_8mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:background="@drawable/dotted"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+        app:layout_constraintTop_toBottomOf="@id/tracking_code" />
+    <!--time-->
+    <TextView
+        android:id="@+id/txt_date_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:text="@string/time_verbal"
+        android:layout_marginStart="@dimen/_6mdp"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintEnd_toStartOf="@id/guid_center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+        app:layout_constraintTop_toBottomOf="@id/line_1" />
+    <!--verbal-->
+    <TextView
+        android:id="@+id/verbal_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="@style/TextAppearance_Farsi_Digits"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toEndOf="@id/guid_center_horizontal"
+        app:layout_constraintTop_toTopOf="@id/txt_date_time"
+        tools:text="123" />
+    <!--line 2-->
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_6mdp"
+        android:layout_marginHorizontal="@dimen/_8mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:background="@drawable/dotted"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+
+        app:layout_constraintTop_toBottomOf="@id/txt_date_time" />
+    <!--address-->
+    <TextView
+        android:id="@+id/txt_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:text="@string/address"
+        android:layout_marginStart="@dimen/_6mdp"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+        app:layout_constraintTop_toBottomOf="@id/line_2" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:layout_marginEnd="@dimen/_8mdp"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toEndOf="@id/txt_address"
+        app:layout_constraintTop_toTopOf="@id/txt_address"
+        tools:text="مازندران-ساری-بلوار طالقانی، مجتمع نگین، طبقه ۲، واحد ۲۵" />
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_6mdp"
+        android:layout_marginHorizontal="@dimen/_8mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:background="@drawable/dotted"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+
+        app:layout_constraintTop_toBottomOf="@id/address" />
+    <!--phone-->
+    <TextView
+        android:id="@+id/txt_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:text="@string/phone_numbers"
+        android:layout_marginStart="@dimen/_6mdp"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintEnd_toStartOf="@id/guid_center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+        app:layout_constraintTop_toBottomOf="@id/line_3" />
+
+    <TextView
+        android:id="@+id/phone_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="@style/TextAppearance_Farsi_Digits"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toEndOf="@id/guid_center_horizontal"
+        app:layout_constraintTop_toTopOf="@id/txt_phone"
+        tools:text="123" />
+
+    <View
+        android:id="@+id/line_4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_6mdp"
+        android:layout_marginHorizontal="@dimen/_8mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:background="@drawable/dotted"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+
+        app:layout_constraintTop_toBottomOf="@id/txt_phone" />
+
+    <!--name sick-->
+    <TextView
+        android:id="@+id/txt_sick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:text="@string/sick"
+        android:layout_marginStart="@dimen/_6mdp"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintEnd_toStartOf="@id/guid_center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+        app:layout_constraintTop_toBottomOf="@id/line_4" />
+
+    <TextView
+        android:id="@+id/sick_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="@style/TextAppearance_Farsi_Digits"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toEndOf="@id/guid_center_horizontal"
+        app:layout_constraintTop_toTopOf="@id/txt_sick"
+        tools:text="123" />
+    <!--payment-->
+
+    <TextView
+        android:id="@+id/payment_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:text="@string/total_amount"
+        android:layout_marginStart="@dimen/_6mdp"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintEnd_toStartOf="@id/guid_center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+        app:layout_constraintTop_toBottomOf="@id/sick_name" />
+
+    <TextView
+        android:id="@+id/total_payment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="@style/TextAppearance_Farsi_Digits"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toEndOf="@id/guid_center_horizontal"
+        app:layout_constraintTop_toTopOf="@id/payment_price"
+        tools:text="123" />
+
+    <View
+        android:id="@+id/line_6"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_6mdp"
+        android:layout_marginHorizontal="@dimen/_8mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:background="@drawable/dotted"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+
+        app:layout_constraintTop_toBottomOf="@id/payment_price" />
+    <!--reservation-->
+    <TextView
+        android:id="@+id/price_reservation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:text="@string/reservation"
+        android:layout_marginStart="@dimen/_6mdp"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintEnd_toStartOf="@id/guid_center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/ticketView"
+        app:layout_constraintTop_toBottomOf="@id/line_6" />
+
+    <TextView
+        android:id="@+id/reservation_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="@style/TextAppearance_Farsi_Digits"
+        app:layout_constraintEnd_toEndOf="@id/ticketView"
+        app:layout_constraintStart_toEndOf="@id/guid_center_horizontal"
+        app:layout_constraintTop_toTopOf="@id/price_reservation"
+        tools:text="123" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_230mdp"
+    android:layout_margin="@dimen/_6mdp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="@dimen/_18mdp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+    <!--parent-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--visit-->
+        <com.vipulasri.ticketview.TicketView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ticketBackgroundColor="@color/Cultured"
+            app:ticketDividerColor="@color/Outer_Space"
+            app:ticketDividerDashGap="@dimen/_12mdp"
+            app:ticketDividerPadding="0dp"
+            app:ticketDividerType="dash"
+            app:ticketElevation="@dimen/_6mdp"
+            app:ticketOrientation="horizontal"
+            app:ticketScallopPositionPercent="56"
+            app:ticketScallopRadius="@dimen/_10mdp"
+            app:ticketShowBorder="false"
+            app:ticketShowDivider="true" />
+        <!--avatar-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatar_doctor"
+            android:layout_width="@dimen/_88mdp"
+            android:layout_height="@dimen/_88mdp"
+            android:layout_marginStart="@dimen/_6mdp"
+            android:layout_marginTop="@dimen/_22mdp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ProfileRound"
+            app:strokeColor="@color/gold"
+            app:strokeWidth="@dimen/_2mdp"
+            tools:src="@tools:sample/avatars"
+            android:padding="@dimen/_2mdp"/>
+        <!--icon bottom avatar-->
+        <View
+            android:id="@+id/bg_view_bottom_avatar"
+            android:layout_width="@dimen/_26mdp"
+            android:layout_height="@dimen/_26mdp"
+            android:background="@drawable/bg_circle"
+            app:layout_constraintBottom_toBottomOf="@id/avatar_doctor"
+            app:layout_constraintEnd_toEndOf="@id/avatar_doctor"
+            app:layout_constraintTop_toBottomOf="@id/avatar_doctor" />
+
+        <ImageView
+            android:id="@+id/img_health"
+            android:layout_width="@dimen/_24mdp"
+            android:layout_height="@dimen/_24mdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_2mdp"
+            android:src="@drawable/heart_circle"
+            app:layout_constraintBottom_toBottomOf="@id/bg_view_bottom_avatar"
+            app:layout_constraintEnd_toEndOf="@id/bg_view_bottom_avatar"
+            app:layout_constraintStart_toStartOf="@id/bg_view_bottom_avatar"
+            app:layout_constraintTop_toTopOf="@id/bg_view_bottom_avatar"
+            app:tint="@color/gold" />
+        <!--name-->
+        <TextView
+            android:id="@+id/doctor_name_family"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_6mdp"
+            android:drawablePadding="@dimen/_4mdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance_Bold"
+            app:drawableStartCompat="@drawable/ic_verify"
+            app:drawableTint="@color/North_Texas_Green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/avatar_doctor"
+            app:layout_constraintTop_toTopOf="@id/avatar_doctor"
+            tools:text="@string/tools_doctor_name" />
+        <!--rate-->
+        <TextView
+            android:id="@+id/txt_rate"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_26mdp"
+            android:layout_margin="@dimen/_12mdp"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance_Farsi_Digits"
+            android:textColor="@color/Raisin_Black"
+            app:drawableEndCompat="@drawable/star"
+            app:drawableTint="@color/gold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/_6mdp"
+
+            tools:text="4.8" />
+
+        <!--Expertise-->
+        <TextView
+            android:id="@+id/txt_expertise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4mdp"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            android:textColor="@color/Outer_Space"
+            app:layout_constraintEnd_toEndOf="@id/doctor_name_family"
+            app:layout_constraintStart_toStartOf="@id/doctor_name_family"
+            app:layout_constraintTop_toBottomOf="@id/doctor_name_family"
+            tools:text="@string/txt_expertise" />
+
+        <TextView
+            android:id="@+id/txt_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6mdp"
+            android:drawablePadding="@dimen/_4mdp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/_1mdp"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            android:textColor="@color/Outer_Space"
+            app:drawableStartCompat="@drawable/location"
+            app:layout_constraintEnd_toEndOf="@id/doctor_name_family"
+            app:layout_constraintStart_toStartOf="@id/doctor_name_family"
+            app:layout_constraintTop_toBottomOf="@id/txt_expertise"
+            tools:text="@string/txt_location" />
+        <!--guid line-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.56" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+        <!--waiting-->
+        <TextView
+            android:id="@+id/txt_waiting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6mdp"
+            android:gravity="center_horizontal"
+            android:text="@string/tools_waiting"
+            android:textAppearance="@style/TextAppearance_light"
+            app:layout_constraintEnd_toStartOf="@id/guid_center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guid_center_horizontal" />
+
+        <TextView
+            android:id="@+id/waiting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance_Farsi_Digits"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guid_center_vertical"
+            app:layout_constraintTop_toTopOf="@id/txt_waiting"
+            tools:text="@string/duration_waiting" />
+        <!--turn-->
+        <TextView
+            android:id="@+id/txt_turn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2mdp"
+            android:gravity="center_horizontal"
+            android:text="@string/turn"
+            android:textAppearance="@style/TextAppearance_light"
+            app:layout_constraintEnd_toStartOf="@id/guid_center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_waiting" />
+
+        <TextView
+            android:id="@+id/time_turn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance_Farsi_Digits"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guid_center_vertical"
+            app:layout_constraintTop_toTopOf="@id/txt_turn"
+            tools:text="@string/duration_waiting" />
+        <!--get turn-->
+        <com.google.android.material.button.MaterialButton
+            style="@style/GreenMaterialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_get_turn"
+            app:backgroundTint="@color/Brandeis_Blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_turn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_180mdp"
+    android:layout_margin="@dimen/_8mdp"
+    android:background="@drawable/bg_rounded">
+    <!--title-->
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Raisin_Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="زنان و زایمان " />
+
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        tools:text="برای بیماری‌های زنان مانند تنبلی تخمدان، مشکلات قاعدگی، یائسگی و... به پزشک زنان مراجعه می‌شود. متخصصان زنان و زایمان روش‌های تشخیصی و درمانی مختلف برای مشکلات زنان ارائه می‌کنند. برای دریافت نوبت متخصص زنان و زایمان می‌توانید از سایت دکتردکتر نوبت اینترنتی بگیرید.
+" />
+    <!--expertise avatar-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatar_1"
+        android:layout_width="@dimen/_60mdp"
+        android:layout_height="@dimen/_60mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:layout_marginEnd="@dimen/_12mdp"
+        android:padding="@dimen/_4mdp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_description"
+        app:shapeAppearance="@style/ProfileRound"
+        app:strokeColor="@color/Brandeis_Blue"
+        app:strokeWidth="@dimen/_1mdp"
+        tools:src="@tools:sample/avatars" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatar_2"
+        android:layout_width="@dimen/_60mdp"
+        android:layout_height="@dimen/_60mdp"
+        android:padding="@dimen/_4mdp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@id/avatar_1"
+        app:layout_constraintStart_toEndOf="@id/avatar_1"
+        app:layout_constraintTop_toTopOf="@id/avatar_1"
+        app:shapeAppearance="@style/ProfileRound"
+        app:strokeColor="@color/Brandeis_Blue"
+        app:strokeWidth="@dimen/_1mdp"
+        tools:src="@tools:sample/avatars" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatar_3"
+        android:layout_width="@dimen/_60mdp"
+        android:layout_height="@dimen/_60mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:padding="@dimen/_4mdp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@id/avatar_2"
+        app:layout_constraintStart_toEndOf="@id/avatar_2"
+        app:layout_constraintTop_toTopOf="@id/avatar_2"
+        app:shapeAppearance="@style/ProfileRound"
+        app:strokeColor="@color/Brandeis_Blue"
+        app:strokeWidth="@dimen/_1mdp"
+        tools:src="@tools:sample/avatars" />
+    <!--count-->
+    <TextView
+        android:id="@+id/txt_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_6mdp"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:textAppearance="@style/TextAppearance_Farsi_Digits"
+        android:textColor="@color/Raisin_Black"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_1"
+        app:layout_constraintStart_toEndOf="@id/avatar_3"
+        app:layout_constraintTop_toTopOf="@id/avatar_1"
+        tools:text="+5000" />
+    <!--show all-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_12mdp"
+        android:drawablePadding="@dimen/_6mdp"
+        android:text="@string/view"
+        android:textAppearance="@style/TextAppearance_light"
+        android:textColor="@color/Brandeis_Blue"
+        app:drawableEndCompat="@drawable/arrow_left_out"
+        app:drawableTint="@color/Outer_Space"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/avatar_3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
